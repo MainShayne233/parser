@@ -16,3 +16,7 @@ def is_norm(str)
 	array += ['+', '-', '=', '<', '>', '.']
 	array.include?(str)
 end
+
+def is_expo(str)
+	str == '^'
+end

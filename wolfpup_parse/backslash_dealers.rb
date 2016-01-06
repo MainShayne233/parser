@@ -16,5 +16,20 @@ def frac_dealer(latex, step)
 		end
 	end
 	args.map!{|i| "(" + i + ")"}
-	return {:val => args.join("/"), :step => step}
+	return {:val => '('+args.join("/")+')', :step => step}
+end
+
+def sqrt_dealer(latex, step)
+	arg = ""
+	step += 6
+	until is_brack(latex[step])
+		package = ups_guy(latex,step)
+		val = package[:val]
+		if !(['(', ')'].include?(val))
+			arg += val
+			step = package[:step]
+		end
+		step += 1
+	end
+	return {:val => 'sqrt('+arg+')', :step => step}
 end

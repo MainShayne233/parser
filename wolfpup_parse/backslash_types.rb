@@ -62,7 +62,7 @@ end
 
 # backslash leads a square root
 def is_sqrt(latex, step)
-	latex[step+1..step+4].join == "sqrt)"
+	latex[step+1..step+4].join == "sqrt"
 end
 
 #backslash leads a sum
