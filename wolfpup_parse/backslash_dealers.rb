@@ -1,5 +1,3 @@
-
-
 def frac_dealer(latex, step)
 	args = Array.new()
 	args[0] = ""
@@ -8,7 +6,6 @@ def frac_dealer(latex, step)
 	while rbrack_cnt < 2
 		step += 1
 		package = ups_guy(latex, step)
-		print "\n\npackages: #{package} args: #{args}\n\n"
 		val = package[:val]
 		if val == ")"
 			rbrack_cnt += 1

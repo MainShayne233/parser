@@ -7,7 +7,7 @@ require_relative 'backslash_dealers'
 
 def ups_guy(latex,step)
 	chr = latex[step]
-	destinations = ['brack', 'dec', 'backslash', 'intop', 'var']
+	destinations = ['brack', 'backslash', 'norm']
 	for d in destinations
 		if send("is_#{d}", chr)
 			return send("#{d}_dealer", latex, step)
@@ -32,4 +32,4 @@ def main_arg(latex)
 	return args.join
 end
 
-puts main_arg('\frac{1+4}{2+4}=\frac{2}{6}')
+puts main_arg('\frac{.1}{x}')
