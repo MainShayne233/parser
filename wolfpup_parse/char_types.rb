@@ -13,8 +13,13 @@ end
 # is the char an integer or operator?
 def is_norm(str)
 	array = ('0'..'9').to_a + ("a".."z").to_a 
-	array += ['+', '-', '=', '<', '>', '.']
+	array += ['+', '-', '=', '<', '>', '.', ',']
+	array += ['[', ']']
 	array.include?(str)
+end
+
+def is_space(str)
+	str = ' '
 end
 
 def is_expo(str)

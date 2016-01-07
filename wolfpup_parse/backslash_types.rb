@@ -16,7 +16,7 @@ def is_geq(latex, step)
 end
 
 # backslash leads an integral
-def is_integral(latex, step)
+def is_int(latex, step)
 	latex[step+1..step+3].join == "int"
 end
 
@@ -61,7 +61,7 @@ def is_rpar(latex, step)
 end
 
 # backslash leads a square root
-def is_sqrt(latex, step)
+def is_root(latex, step)
 	latex[step+1..step+4].join == "sqrt"
 end
 

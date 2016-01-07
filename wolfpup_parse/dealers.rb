@@ -4,7 +4,7 @@ def brack_dealer(latex,step)
 end
 
 def backslash_dealer(latex,step)
-	types = ['comb', 'frac', 'geq', 'integral', 'sqrt']
+	types = ['comb', 'frac', 'geq', 'int', 'root', 'pi']
 	for t in types
 		if send("is_#{t}", latex, step)
 			return send("#{t}_dealer", latex, step)
@@ -31,6 +31,11 @@ def expo_dealer(latex, step)
 		end
 	else
 		arg = latex[step]
+		#step += 1
 	end
 	return {:val => '^'+'('+arg+')', :step => step}
+end
+
+def space_dealer(latex, step)
+	return {:val => '', :step => step}
 end
