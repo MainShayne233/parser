@@ -21,10 +21,12 @@ def int_limits_dealer(latex, step)
 	step += 1
 	while lim_cnt < 2
 		if latex[step] == '{'
+			step += 1
 			until latex[step] == '}'
 				package = ups_guy(latex,step)
 				val = package[:val]
-				args[lim_cnt] += val if val != '}'
+				args[lim_cnt] += val
+				print "\n\n#{package} : #{args} : #{latex[step]}\n\n"
 				step = package[:step]
 				step += 1
 			end
@@ -54,6 +56,7 @@ def def_int_dealer(latex, step)
 		step += 1
 	end
 	step += 1
+	puts arg
 	hash = {:val => 'integral '+ lim + ' (' + arg + ')', :step => step}
 	return hash
 end

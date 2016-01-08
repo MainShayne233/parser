@@ -28,4 +28,4 @@ def main_arg(latex)
 	return args.join
 end
 
-puts main_arg('\int_{\sqrt{2}}^{\sqrt{3}}x^2dx')
+puts main_arg('\binom{1}{2}')

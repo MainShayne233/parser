@@ -1,5 +1,3 @@
-
-
 # is the char a bracker
 def is_brack(str)
 	['{', '}'].include?(str)
@@ -19,7 +17,7 @@ def is_norm(str)
 end
 
 def is_space(str)
-	str = ' '
+	str == ' '
 end
 
 def is_expo(str)
