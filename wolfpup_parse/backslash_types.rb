@@ -57,7 +57,7 @@ end
 
 # backslash leads a right parantheses
 def is_rpar(latex, step)
-	latex[step+1..step+6].join == "right)"
+	latex[step+1..step+5].join == "right)"
 end
 
 # backslash leads a square root
